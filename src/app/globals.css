@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0B0D10;
+    --bg-surface: #14171C;
+    --bg-card: #12151B;
+    --bg-surface-elevated: #1A1E26;
+    --text-primary: #F5F7FA;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    --accent: #8B9CFF;
+    --accent-glow: rgba(139, 156, 255, 0.15);
+    --border-color: #292D35;
+    --border-subtle: #1E232B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #0B0D10;
+    color: #F5F7FA;
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #8B9CFF;
+    selection-color: #0B0D10;
+  }
+
+  ::selection {
+    background-color: #8B9CFF;
+    color: #0B0D10;
+  }
+}
+
+/* Custom engineering grid background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(41, 45, 53, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(41, 45, 53, 0.35) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(139, 156, 255, 0.15) 1px, transparent 1px);
+}
+
+/* Subtle accent ambient glow */
+.ambient-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(139, 156, 255, 0.08) 0%, transparent 70%);
+}
+
+/* Custom thin scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292D35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B9CFF;
+}
